@@ -8,5 +8,5 @@ RUN pip install -r requirements.txt
 # copy all content from the local file to the image
 COPY . /app
 # configure the container to run in an executed manner
-ENTRYPOINT [ "python" ]
+ENTRYPOINT ["python"]
 CMD ["app.py"]
