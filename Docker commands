@@ -1,0 +1,96 @@
+# Install Docker
+sudo yum install docker -y
+
+# Verify Docker installation.
+docker --version
+
+# View available images on your system
+docker images
+
+# List all running containers
+docker ps
+
+# Download an image from a Docker registry
+docker pull <image>
+
+# Run a container from an image with default settings
+docker run <image>
+
+# Interact with the container via terminal
+docker run -it <image>
+
+# Stop a running container
+docker stop <container>
+
+# Stop multiple Docker containers at once
+docker stop $(docker ps -q)
+
+# Remove multiple Docker containers at once
+ocker remove $(docker ps -aq)
+
+# Remove a container
+docker rm <container>
+
+# Remove an image
+docker rmi <image>
+
+# Create image from dockerfile
+docker build -t <dockerfile name> .
+
+# Access the container shell or execute commands
+docker exec -it <container_name> /bin/bash
+
+# Display logs of a container
+docker logs <container>
+
+# View detailed metadata about a container or image
+docker inspect <container|image>
+
+# Copy files to/from a container
+docker cp <source> <container>:<destination>
+
+# Monitor container performance
+docker stats
+
+# List Docker networks
+docker network ls
+
+# Create a custom Docker network
+docker network create <name>
+
+# Connect a Container to a Network
+docker network connect <network_name> <container_name>
+
+# List Docker volumes
+docker volume ls
+
+# Create a named volume
+docker volume create <name>
+
+# Manage multi-container applications(Start all services defined in a docker-compose.yml file)
+docker-compose up
+
+# Stop and remove services and networks created by docker-compose
+docker-compose down
+
+# Tag an image with a new name(for publishing)
+docker tag <source> <target>
+
+# Push an image to a Docker registry
+docker push <repository>
+
+# Remove unused Docker objects (images, containers, volumes, etc.)/Clean up disk space automatically
+docker prune
+
+# Create a new Docker image from a container's current state
+docker commit <container> <repository:tag>
+
+# upload a Docker image from your local machine to a Docker registry
+docker push <repository:tag>
+
+# Create tar file of image
+docker save -o <filename>.tar <image:tag>
+
+# load a Docker image from the tar file 
+docker load -i <filename>.tar
+
