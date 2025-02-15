@@ -1,3 +1,4 @@
+```bash
 # Install Docker
 sudo yum install docker -y
 
