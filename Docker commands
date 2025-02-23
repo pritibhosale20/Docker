@@ -26,7 +26,7 @@ docker stop <container>
 docker stop $(docker ps -q)
 
 # Remove multiple Docker containers at once
-docker remove $(docker ps -aq)
+docker rm $(docker ps -aq)
 
 # Remove a container
 docker rm <container>
